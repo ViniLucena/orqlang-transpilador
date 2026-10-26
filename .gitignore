@@ -1,0 +1,20 @@
+# arquivos do python
+__pycache__/
+*.py[cod]
+
+# ambientes virtuais e local vars
+venv/
+env/
+.env
+
+# arquivos gerados automaticamente pelo PLY
+parsetab.py
+parser.out
+
+# arquivos gerados pelo transpilador
+
+# arquivos do macOS
+.DS_Store
+
+# configs da IDE
+.vscode/
