@@ -45,10 +45,34 @@ def p_comando_sub(p):
 def p_comando_mult(p):
     'expressao : expressao MULT expressao'
     p[0] = ("MULT", p[1], p[3])
-    
+
 def p_comando_div(p):
     'expressao : expressao DIV expressao'
     p[0] = ("DIV", p[1], p[3])
+
+def p_chamada_servico_sem_retorno(p):
+    'comando : SERVICO ID APARENT argumentos FPARENT'
+    p[0] = ('SERVICO', p[2], p[4], None)
+
+def p_chamada_servico_com_retorno(p):
+    'comando : SERVICO ID APARENT argumentos FPARENT SETA ID'
+    p[0] = ('SERVICO', p[2], p[4], p[7])
+
+def p_argumentos_vazio(p):
+    'argumentos : '
+    p[0] = []
+
+def p_argumentos_lista(p):
+    'argumentos : lista_argumentos'
+    p[0] = p[1]
+
+def p_lista_argumentos_um(p):
+    'lista_argumentos : expressao'
+    p[0] = [p[1]]
+
+def p_lista_argumentos_varios(p):
+    'lista_argumentos : lista_argumentos VIRGULA expressao'
+    p[0] = p[1] + [p[3]]
 
 def p_expressao_num(p):
     'expressao : NUM'

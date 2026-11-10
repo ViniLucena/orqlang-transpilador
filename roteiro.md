@@ -46,17 +46,15 @@
 
 [x] Regra de impressão: IMPRIMIR expr.
 
-[x] Regra de operações e atribuição de expressões
+[x] Regra de chamada de serviço sem retorno: SERVICO ID ( argumentos ).
 
-[ ] Regra de chamada de serviço sem retorno: SERVICO ID ( argumentos ).
-
-[ ] Regra de chamada de serviço com retorno: SERVICO ID ( argumentos ) -> ID.
+[x] Regra de chamada de serviço com retorno: SERVICO ID ( argumentos ) -> ID.
 
 [x] Função de tratamento de erros sintáticos (p_error) indicando a linha do erro.
 
 ## Fase 4: Extensões Obrigatórias (Sintaxe e Precedência)
 
-[ ] Expressões Aritméticas: Adicionar regras para +, -, *, /.
+[x] Expressões Aritméticas: Adicionar regras para +, -, *, /.
 
 [ ] Precedência: Configurar a tupla precedence no PLY para resolver ambiguidades matematicas e associatividade à esquerda.
 
