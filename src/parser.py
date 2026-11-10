@@ -13,6 +13,12 @@ Ferramenta: ply.yacc
 import ply.yacc as yacc
 from lexer import tokens
 
+
+precedence = (
+    ('left', 'SOMA', 'SUB'),
+    ('left', 'MULT', 'DIV'),
+)
+
 def p_programa(p):
     'programa : INICIO comandos FIM'
     print("Programa válido!")
