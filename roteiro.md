@@ -40,17 +40,19 @@
 
 [x] Implementar a regra raiz do programa (programa : INICIO comandos FIM).
 
-[ ] Implementar o encadeamento de comandos (comandos : comando | comandos comando).
+[x] Implementar o encadeamento de comandos (comandos : comando | comandos comando).
 
-[ ] Regra de atribuição: VAR ID = expr.
+[x] Regra de atribuição: VAR ID = expr.
 
-[ ] Regra de impressão: IMPRIMIR expr.
+[x] Regra de impressão: IMPRIMIR expr.
+
+[x] Regra de operações e atribuição de expressões
 
 [ ] Regra de chamada de serviço sem retorno: SERVICO ID ( argumentos ).
 
 [ ] Regra de chamada de serviço com retorno: SERVICO ID ( argumentos ) -> ID.
 
-[ ] Função de tratamento de erros sintáticos (p_error) indicando a linha do erro.
+[x] Função de tratamento de erros sintáticos (p_error) indicando a linha do erro.
 
 ## Fase 4: Extensões Obrigatórias (Sintaxe e Precedência)
 

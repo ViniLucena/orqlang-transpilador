@@ -34,6 +34,22 @@ def p_comando_imprimir(p):
     'comando : IMPRIMIR expressao'
     p[0] = ('IMPRIMIR', p[2])
 
+def p_comando_soma(p):
+    'expressao : expressao SOMA expressao'
+    p[0] = ("SOMA", p[1], p[3])
+
+def p_comando_sub(p):
+    'expressao : expressao SUB expressao'
+    p[0] = ("SUB", p[1], p[3])
+
+def p_comando_mult(p):
+    'expressao : expressao MULT expressao'
+    p[0] = ("MULT", p[1], p[3])
+    
+def p_comando_div(p):
+    'expressao : expressao DIV expressao'
+    p[0] = ("DIV", p[1], p[3])
+
 def p_expressao_num(p):
     'expressao : NUM'
     p[0] = ('NUM', p[1])
@@ -45,3 +61,11 @@ def p_expressao_str(p):
 def p_expressao_id(p):
     'expressao : ID'
     p[0] = ('ID', p[1])
+
+def p_error(p):
+    if p:
+        print(f"ERRO SINTATICO: token inesperado '{p.value}' na linha {p.lineno}")
+    else:
+        print("ERRO SINTATICO: fim de arquivo inesperado (faltou um FIM?)")
+
+parser = yacc.yacc()
