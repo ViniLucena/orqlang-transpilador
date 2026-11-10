@@ -16,29 +16,29 @@
 
 ## Fase 2: Analisador Léxico (src/lexer.py)
 
-[ ] Definir a tupla tokens com os nomes dos símbolos.
+[x] Definir a tupla tokens com os nomes dos símbolos.
 
-[ ] Mapear as palavras reservadas (INICIO, FIM, VAR, SERVICO, IMPRIMIR, VERDADEIRO, FALSO, SE, ENTAO, SENAO, REPITA, VEZES).
+[x] Mapear as palavras reservadas (INICIO, FIM, VAR, SERVICO, IMPRIMIR, VERDADEIRO, FALSO, SE, ENTAO, SENAO, REPITA, VEZES).
 
-[ ] Escrever RegEx para identificadores (ID).
+[x] Escrever RegEx para identificadores (ID).
 
-[ ] Escrever RegEx para números inteiros e decimais (NUM).
+[x] Escrever RegEx para números inteiros e decimais (NUM).
 
-[ ] Escrever RegEx para strings entre aspas duplas (STR).
+[x] Escrever RegEx para strings entre aspas duplas (STR).
 
-[ ] Implementar regra para ignorar espaços, tabulações e quebras de linha (atualizando o contador de linhas).
+[x] Implementar regra para ignorar espaços, tabulações e quebras de linha (atualizando o contador de linhas).
 
-[ ] Implementar regra para ignorar comentários (iniciados por #).
+[x] Implementar regra para ignorar comentários (iniciados por #).
 
-[ ] Implementar a função de tratamento de erros léxicos (t_error).
+[x] Implementar a função de tratamento de erros léxicos (t_error).
 
-[ ] Teste: Rodar o Lexer isoladamente imprimindo os tokens do exemplos/01_basico.orq.
+[x] Teste: Rodar o Lexer isoladamente imprimindo os tokens do exemplos/01_basico.orq.
 
 ## Fase 3: Analisador Sintático Base (src/parser.py)
 
-[ ] Configurar a importação dos tokens gerados pelo Lexer.
+[x] Configurar a importação dos tokens gerados pelo Lexer.
 
-[ ] Implementar a regra raiz do programa (programa : INICIO comandos FIM).
+[x] Implementar a regra raiz do programa (programa : INICIO comandos FIM).
 
 [ ] Implementar o encadeamento de comandos (comandos : comando | comandos comando).
 

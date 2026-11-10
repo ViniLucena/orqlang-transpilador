@@ -87,7 +87,7 @@ t_VIRGULA  = r','
 # [x] Escrever RegEx para strings entre aspas duplas (STR).
 # O padrão captura as aspas no início/fim e qualquer coisa no meio, exceto quebras de linha ou novas aspas.
 def t_STR(t):
-    r'"[^\n]*"'
+    r'"[^"\n]*"'
     # Removemos as aspas da string lida para facilitar o Parser depois
     t.value = t.value[1:-1]
     return t
@@ -115,7 +115,7 @@ def t_ID(t):
 
 # [x] Implementar regra para ignorar espaços e tabulações.
 # A string especial t_ignore é usada pelo PLY para pular os caracteres imediatamente.
-t_ignore = '\t'
+t_ignore = ' \t'
 
 # [x] Implementar regra para ignorar comentários (iniciados por #).
 # Essa função usa o padrão # seguido de qualquer caractere (.*) para varrer tudo. 
