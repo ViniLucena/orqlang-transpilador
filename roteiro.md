@@ -46,13 +46,13 @@
 
 Dica: Esta fase pode ser feita em paralelo com as fases 3 e 4, adicionando ações semânticas diretamente nas regras do parser.
 
-- [ ] Criar o script main.py para ler um arquivo .orq, invocar o parser e salvar o .py.
-- [ ] Injetar from runtime.servicos import * no topo do código gerado.
-- [ ] Traduzir VAR para atribuições simples no Python.
-- [ ] Traduzir IMPRIMIR para print().
-- [ ] Traduzir comandos SERVICO para chamadas de função Python.
-- [ ] Traduzir blocos SE/SENAO para if/else (garantindo a indentação correta gerada no texto final).
-- [ ] Traduzir bloco REPITA para um loop for _ in range(...) no Python.
+- [x] Criar o script main.py para ler um arquivo .orq, invocar o parser e salvar o .py.
+- [x] Injetar from runtime.servicos import * no topo do código gerado.
+- [x] Traduzir VAR para atribuições simples no Python.
+- [x] Traduzir IMPRIMIR para print().
+- [x] Traduzir comandos SERVICO para chamadas de função Python.
+- [x] Traduzir blocos SE/SENAO para if/else (garantindo a indentação correta gerada no texto final).
+- [x] Traduzir bloco REPITA para um loop for _ in range(...) no Python.
 
 ## Fase 6: Bônus - Paralelismo (Opcional)
 

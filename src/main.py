@@ -13,7 +13,7 @@ import os
 
 from parser import parser
 
-# from gerador import gerar_codigo
+from gerador import gerar_codigo
 
 def compilar_arquivo(caminho_entrada):
     
@@ -59,16 +59,16 @@ def compilar_arquivo(caminho_entrada):
         # Escreve o código traduzido
         f.write(codigo_python_gerado)
         
-    print(f"Arquivo gerado com sucesso em f{caminho_saida}")
+    print(f"Arquivo gerado com sucesso em {caminho_saida}")
     
-    if __name__ == "__main__":
-        # Permite rodar passando o arquivo via linha de comando
-        # Exemplo: python src/main.py exemplos/01_basico.orq
-        if len(sys.argv) > 1:
-            arquivo_alvo = sys.argv[1]
-        else:
-        # Padrão de segurança para testes rápidos na IDE
-            caminho_base = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-            arquivo_alvo = os.path.join(caminho_base, 'exemplos', '01_basico.orq')
-        
-        compilar_arquivo(arquivo_alvo)
+if __name__ == "__main__":
+    # Permite rodar passando o arquivo via linha de comando
+    # Exemplo: python src/main.py exemplos/01_basico.orq
+    if len(sys.argv) > 1:
+        arquivo_alvo = sys.argv[1]
+    else:
+    # Padrão de segurança para testes rápidos na IDE
+        caminho_base = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        arquivo_alvo = os.path.join(caminho_base, 'exemplos', '01_basico.orq')
+    
+    compilar_arquivo(arquivo_alvo)
